@@ -1,0 +1,8 @@
+**/dist/*
+**/vendor/*
+
+android/*
+build/*
+ios/*
+node_modules/*
+src/**/*.spec.*
