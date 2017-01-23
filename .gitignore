@@ -1,53 +1,43 @@
 # OSX
-#
 .DS_Store
 
 # Xcode
-#
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
 !default.mode1v3
-*.mode2v3
 !default.mode2v3
-*.perspectivev3
+!default.pbxuser
 !default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
 *.hmap
 *.ipa
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+*.xccheckout
 *.xcuserstate
+**build/
+DerivedData
 project.xcworkspace
+xcuserdata
 
 # Android/IntelliJ
-#
-build/
-.idea
 .gradle
-local.properties
+.idea
 *.iml
+**/build/
+local.properties
 
 # node.js
-#
 node_modules/
 npm-debug.log
 
 # BUCK
-buck-out/
+*.keystore
 \.buckd/
 android/app/libs
-*.keystore
+buck-out/
 
 # fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
-
-fastlane/report.xml
 fastlane/Preview.html
+fastlane/report.xml
 fastlane/screenshots
