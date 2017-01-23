@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { ListView } from 'react-native';
+import { ListView, TouchableOpacity } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 
 export default class Library extends Component {
   constructor(props) {
     super(props);
+
+    this.renderRow = this.renderRow.bind(this);
 
     this.ds = new ListView.DataSource({
       rowHasChanged: (row1, row2) => row1 !== row2,
@@ -16,9 +18,7 @@ export default class Library extends Component {
   }
 
   componentWillMount() {
-    if (this.props.onLoad) {
-      this.props.onLoad();
-    }
+    this.props.onLoad();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -29,10 +29,12 @@ export default class Library extends Component {
 
   renderRow (rowData, sectionId, rowId) {
     return (
-      <ListItem
-        key={rowId}
-        title={rowData.title}
-      />
+      <TouchableOpacity onPress={() => (this.props.onSelect(rowData))}>
+        <ListItem
+          key={rowId}
+          title={rowData.title}
+        />
+      </TouchableOpacity>
     )
   }
 
@@ -50,5 +52,6 @@ export default class Library extends Component {
 
 Library.propTypes = {
   library: React.PropTypes.array.isRequired,
-  onLoad: React.PropTypes.func
+  onLoad: React.PropTypes.func.isRequired,
+  onSelect: React.PropTypes.func.isRequired
 };

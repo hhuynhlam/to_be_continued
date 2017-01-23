@@ -15,6 +15,10 @@ export function mapDispatchToProps(dispatch) {
         dispatch(setLibrary(tracks));
       });
     },
+
+    onSelect: (track) => {
+      iTunes.playTrack(track);
+    },
   };
 }
 
