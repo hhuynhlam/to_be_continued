@@ -978,6 +978,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haihuynhlam.to-be-continued";
 				PRODUCT_NAME = to_be_continued;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -996,6 +997,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.haihuynhlam.to-be-continued";
 				PRODUCT_NAME = to_be_continued;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
